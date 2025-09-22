@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATX Food Mood Guide</title>
+  <!--
+    React and ReactDOM are pulled from a CDN to keep the project self‑contained.
+    This avoids the need for a Node based build system while still letting us
+    write modern React code.  Framer Motion is also loaded via CDN for
+    smooth animations.
+  -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <!-- Tailwind CSS CDN for rapid styling. Version pinned to 2.2 to ensure
+       compatibility with the CDN build. -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      /* Austin inspired palette used throughout the UI */
+      --burnt-orange: #BF5700;
+      --deep-teal: #008080;
+      --warm-gold: #FFD700;
+      --sage-green: #9CAF88;
+      --sunset-pink: #FF6B6B;
+    }
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    /* Smooth fade for overlay backgrounds */
+    .fade {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-100">
+  <!-- The root element for our React application. ReactDOM will mount here. -->
+  <div id="root" class="w-full"></div>
+  <!-- Our application logic lives in script.js -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
