@@ -445,7 +445,7 @@ function App() {
           <p>
             Looking for the code? Check out our GitHub repository:
             <a
-              href="https://github.com/example/atx-food-mood-guide"
+href="https://github.com/up24tv1/atx-food-mood-guide"
               className="text-blue-600 underline ml-1"
               target="_blank"
               rel="noopener noreferrer"
