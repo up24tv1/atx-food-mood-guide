@@ -48,7 +48,11 @@
 <body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-100">
   <!-- The root element for our React application. ReactDOM will mount here. -->
   <div id="root" class="w-full"></div>
-  <!-- Our application logic lives in script.js -->
-  <script type="module" src="script.js"></script>
+  <!-- Our application logic lives in script.js.  
+       We omit `type="module"` here because the code relies on global UMD
+       bundles for React, ReactDOM and Framer Motion.  Using a module
+       script would scope away these globals and cause `React` to be
+       undefined.  -->
+  <script src="script.js"></script>
 </body>
 </html>
